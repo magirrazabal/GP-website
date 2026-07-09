@@ -3,8 +3,9 @@
    ========================================================================== */
 
 :root {
-  --color-green: #388058;
+  --color-green: #398e65;
   --color-green-dark: #2c6544;
+  --color-navy: #1e5075;
   --color-charcoal: #4b5153;
   --color-cream: #fafbf6;
   --color-white: #ffffff;
@@ -49,22 +50,50 @@ img {
 }
 
 .navbar-goprop .navbar-brand img {
-  height: 150px;
+  height: 72px;
 }
 
 .navbar-goprop .nav-link {
   color: var(--color-navy);
   font-weight: 500;
   letter-spacing: 0.03em;
-  margin-left: 8.5rem;
+  margin-left: 2.5rem;
   padding: 0 !important;
 }
 
+.navbar-goprop .nav-item:first-child .nav-link {
+  margin-left: 4rem;
+}
+
 .navbar-goprop .nav-link.active {
-  color: var(--color-green-navy);
+  color: var(--color-navy);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 6px;
+}
+
+.lang-switch {
+  margin-left: 2.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.lang-switch a {
+  color: var(--color-navy);
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.lang-switch a.current {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.lang-switch a:hover {
+  opacity: 0.8;
 }
 
 /* ==========================================================================
@@ -73,9 +102,9 @@ img {
 
 .hero {
   position: relative;
-  min-height: 70vh;
+  min-height: 85vh;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   display: flex;
   align-items: flex-end;
 }
