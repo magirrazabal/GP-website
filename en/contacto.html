@@ -11,6 +11,11 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+
 </head>
 <body>
 
@@ -19,7 +24,7 @@
       <a class="navbar-brand" href="index.html">
         <img src="../assets/images/logo.png" alt="Go Prop">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Open menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMain">
@@ -36,12 +41,65 @@
     </div>
   </nav>
 
-  <main class="section-padding">
-    <div class="container text-center">
-      <h1>Contact</h1>
-      <p class="text-muted">Page under construction — design pending.</p>
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Let's Start Your Technical Evaluation</h1>
+      <p class="contact-subtext">Our <strong>service is personalized</strong>. Based on the information below, we'll review your case and <strong>get in touch shortly</strong></p>
+
+      <!-- Netlify Forms: requires the 'data-netlify' attribute + a matching hidden 'form-name' input.
+           Netlify detects this automatically at deploy time — no backend code needed.
+           NOTE: this uses a separate form name ("contacto-en") from the Spanish page so
+           Netlify's dashboard keeps EN/ES submissions distinguishable. -->
+      <form class="contact-form" name="contacto-en" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contacto-en">
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <label for="nombre">Full Name*</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="col-md-4 mb-4">
+            <label for="telefono">Phone*</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+          <div class="col-md-4 mb-4">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <label for="pregunta1">Question 1</label>
+            <input type="text" id="pregunta1" name="pregunta1">
+          </div>
+          <div class="col-md-6 mb-4">
+            <label for="pregunta2">Question 2</label>
+            <input type="text" id="pregunta2" name="pregunta2">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <label for="pregunta3">Question 3</label>
+            <input type="text" id="pregunta3" name="pregunta3">
+          </div>
+          <div class="col-md-6 mb-4">
+            <label for="pregunta4">Question 4</label>
+            <input type="text" id="pregunta4" name="pregunta4">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-goprop mt-3">Submit</button>
+      </form>
+
+      <div class="social-icons mt-5">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:info@goprop.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
     </div>
-  </main>
+  </section>
 
   <footer class="footer-goprop">
     <div class="container">

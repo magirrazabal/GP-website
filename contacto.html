@@ -11,6 +11,12 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+      <!-- FAVICON -->
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 </head>
 <body>
 
@@ -36,12 +42,63 @@
     </div>
   </nav>
 
-  <main class="section-padding">
-    <div class="container text-center">
-      <h1>Contacto</h1>
-      <p class="text-muted">Página en construcción — pendiente de diseño.</p>
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Iniciemos tu Evaluación Técnica</h1>
+      <p class="contact-subtext">Nuestro <strong>servicio es personalizado</strong>. A partir de la siguiente información, analizaremos tu caso y <strong>nos contactaremos a la brevedad</strong></p>
+
+      <!-- Netlify Forms: requires the 'data-netlify' attribute + a matching hidden 'form-name' input.
+           Netlify detects this automatically at deploy time — no backend code needed. -->
+      <form class="contact-form" name="contacto" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contacto">
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <label for="nombre">Nombre y Apellido*</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="col-md-4 mb-4">
+            <label for="telefono">Teléfono*</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+          <div class="col-md-4 mb-4">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <label for="pregunta1">Pregunta 1</label>
+            <input type="text" id="pregunta1" name="pregunta1">
+          </div>
+          <div class="col-md-6 mb-4">
+            <label for="pregunta2">Pregunta 2</label>
+            <input type="text" id="pregunta2" name="pregunta2">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <label for="pregunta3">Pregunta 3</label>
+            <input type="text" id="pregunta3" name="pregunta3">
+          </div>
+          <div class="col-md-6 mb-4">
+            <label for="pregunta4">Pregunta 4</label>
+            <input type="text" id="pregunta4" name="pregunta4">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-goprop mt-3">Enviar</button>
+      </form>
+
+      <div class="social-icons mt-5">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:info@goprop.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
     </div>
-  </main>
+  </section>
 
   <footer class="footer-goprop">
     <div class="container">
