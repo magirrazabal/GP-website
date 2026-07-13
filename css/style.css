@@ -668,6 +668,15 @@ img {
   color: var(--color-green);
 }
 
+.form-status {
+  min-height: 1.5rem;
+  font-weight: 500;
+}
+
+.form-status-error {
+  color: #ffb3b3;
+}
+
 /* ==========================================================================
    Placeholder blocks (temporary — remove once real assets are in place)
    ========================================================================== */

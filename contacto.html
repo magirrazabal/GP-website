@@ -49,9 +49,12 @@
 
       <!-- Netlify Forms: requires the 'data-netlify' attribute + a matching hidden 'form-name' input.
            Netlify detects this automatically at deploy time — no backend code needed. -->
-      <form class="contact-form" name="contacto" method="POST" data-netlify="true">
+      <form class="contact-form" id="contactForm" name="contacto" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"></form>
         <input type="hidden" name="form-name" value="contacto">
-
+        
+<p class="d-none">
+  <label>No completar si eres humano: <input name="bot-field"></label>
+</p>
         <div class="row">
           <div class="col-md-4 mb-4">
             <label for="nombre">Nombre y Apellido*</label>
@@ -90,6 +93,7 @@
         </div>
 
         <button type="submit" class="btn btn-outline-goprop mt-3">Enviar</button>
+        <div id="formStatus" class="form-status mt-3" aria-live="polite"></div>
       </form>
 
       <div class="social-icons mt-5">
