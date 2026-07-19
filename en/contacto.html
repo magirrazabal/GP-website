@@ -16,6 +16,9 @@
     <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
 </head>
 <body>
 
@@ -50,7 +53,7 @@
 <form class="contact-form" id="contactForm" name="contacto-en" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contacto-en">
 <p class="d-none">
-  <label>No completar si eres humano: <input name="bot-field"></label>
+  <label>Please leave this field blank if you are human: <input name="bot-field"></label>
 </p>
         <div class="row">
           <div class="col-md-4 mb-4">
@@ -58,34 +61,31 @@
             <input type="text" id="nombre" name="nombre" required>
           </div>
           <div class="col-md-4 mb-4">
-            <label for="telefono">Phone*</label>
-            <input type="tel" id="telefono" name="telefono" required>
-          </div>
-          <div class="col-md-4 mb-4">
             <label for="email">Email *</label>
             <input type="email" id="email" name="email" required>
+          </div>
+          <div class="col-md-4 mb-4">
+            <label for="telefono">Phone</label>
+            <input type="tel" id="telefono" name="telefono">
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-4">
-            <label for="pregunta1">Question 1</label>
+            <label for="pregunta1">Property size in m<sup>2</sup></label>
             <input type="text" id="pregunta1" name="pregunta1">
           </div>
           <div class="col-md-6 mb-4">
-            <label for="pregunta2">Question 2</label>
+            <label for="pregunta2">What times can we reach you?</label>
+            <span class="field-hint">9 a.m. to 1 p.m. or 1 p.m. to 6 p.m.</span>
             <input type="text" id="pregunta2" name="pregunta2">
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 mb-4">
-            <label for="pregunta3">Question 3</label>
-            <input type="text" id="pregunta3" name="pregunta3">
-          </div>
-          <div class="col-md-6 mb-4">
-            <label for="pregunta4">Question 4</label>
-            <input type="text" id="pregunta4" name="pregunta4">
+          <div class="col-md-12 mb-4">
+            <label for="pregunta3">Other comments</label>
+            <textarea id="pregunta3" name="pregunta3" rows="3"></textarea>
           </div>
         </div>
 
@@ -106,15 +106,17 @@
       <div class="row align-items-center">
         <div class="col-md-5 mb-3 mb-md-0 footer-brand">
           <img src="../assets/images/logo.png" alt="Go Prop" style="height:72px;">
-          <p class="footer-copyright">&copy; 2026 <em>GOPROP</em>. Todos los derechos reservados.</p>
+          <p class="footer-copyright">&copy; 2026 <em>GOPROP</em>. All rights reserved.</p>
         </div>
-<div class="col-md-7 text-md-end footer-links">
-          <div class="footer-links-row"><a href="nosotros.html">About Us</a><span class="footer-sep">|</span><a href="contacto.html">Contact</a></div>
-          <div class="footer-links-row"><a href="#">Privacy Policy</a><span class="footer-sep">|</span><a href="#">Terms of Service</a></div>
+        <div class="col-md-7 text-md-end footer-links">
+          <div class="footer-links-row"><a href="nosotros.html">About Us</a><span class="footer-sep">|</span><a
+              href="contacto.html">Contact</a></div>
+          <div class="footer-links-row"><a href="#">Privacy Policy</a><span class="footer-sep">|</span><a href="#">Terms
+              of Service</a></div>
         </div>
       </div>
-<div class="text-center mt-3 footer-credit">
-        <p>creado por</p>
+      <div class="text-center mt-3 footer-credit">
+        <p>developed by</p>
         <img src="../assets/images/uapix-logo.png" alt="UAPIX">
       </div>
     </div>

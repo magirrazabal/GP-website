@@ -518,7 +518,9 @@ img {
   font-size: 1.4rem;
 }
 
-.team-carousel .team-slide {
+.team-carousel .team-slide.active,
+.team-carousel .carousel-item-next.team-slide,
+.team-carousel .carousel-item-prev.team-slide {
   display: flex;
   flex-wrap: wrap;
   min-height: 60vh;
@@ -540,7 +542,7 @@ img {
   flex: 1 1 50%;
   background-color: var(--color-navy);
   color: var(--color-white);
-  padding: 3rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -621,22 +623,46 @@ img {
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
-
-.contact-form input {
+.contact-form .row > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.field-hint {
+  display: block;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: -0.25rem;
+  margin-bottom: 0.5rem;
+}
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   color: var(--color-white);
   padding: 0.5rem 0;
+  font-family: inherit;
+  resize: vertical;
 }
 
-.contact-form input:focus {
+.contact-form textarea {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  padding: 0.75rem;
+  min-height: 110px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-bottom-color: var(--color-white);
 }
 
-.contact-form input::placeholder {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
